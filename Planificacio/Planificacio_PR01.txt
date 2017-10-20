@@ -1,5 +1,6 @@
 PLANIFICACIÓ.
 
+
 Dia 18/10/2017:
 	-Organització del projecte Brompton
 	-Estudiar el contingut de la empresa (css, html)
@@ -20,8 +21,9 @@ Dia 19/10/2017
 Dia 20/10/2017
 	-Evitar errors en els formularis
 	-Acabar de insertar informació a la BD
-	-Continuar amb el full d'estils css
+	-Continuar amb el full d'estils css 
 	-Unir els documents html - css amb php
+	-Buscar información del select * from anunci where anunci.model like %% AND anunci.color like %%
 
 
 
