@@ -1,0 +1,71 @@
+PLANIFICACIÓ.
+
+Dia 18/10/2017:
+	-Organització del projecte Brompton
+	-Estudiar el contingut de la empresa (css, html)
+	-Planificar la estructura del treball
+	-Insertar BD
+	-Crear la unió entre php - BD
+	-Creació de les dades per insertar a la base de dades (bicicletes robades).
+	-Creació 
+
+
+Dia 19/10/2017
+	-Iniciar la programacio (Formulari de busqueda)
+	-Estudiar css pagina i començar a crear la plantilla
+	-Organitzar css en les carpetes i omplir amb nova informacio
+	-Seguir afegint informació a la BD
+
+
+Dia 20/10/2017
+	-Evitar errors en els formularis
+	-Acabar de insertar informació a la BD
+	-Continuar amb el full d'estils css
+	-Unir els documents html - css amb php
+
+
+
+
+Dia 21/10/2017
+	-Revisar el treball
+	-Solucionar problemes imprevistos
+	-Comprobar el funcionament correcte
+
+
+
+
+Dia 22/10/2017
+	-
+	-
+	-
+	-
+
+
+
+Dia 23/10/2017
+	-
+	-
+	-
+	-
+
+
+
+Dia 24/10/2017
+	-
+	-
+	-
+	-
+
+
+
+
+
+
+
+
+
+
+
+
+
+
