@@ -113,9 +113,8 @@
 	<script type="text/javascript">
 		<?php
 			include('conexion.php');
-
-			$q="SELECT nom_tipus_bici FROM tipus_bici";
-			$resultado = mysqli_query($conexion,$q);
+			$q="SELECT * FROM anunci WHERE anu_id=$_REQUEST[anu_id]";
+			
 		?>
 	</script>
 	
@@ -350,40 +349,26 @@
 	    				<div class="content">
 
 			            	<!-- añadir formulario  -->
+			           		<h1>Información</h1>
+
 			           		<?php
-								//ENLACE ENTRE DOCUMENTO PHP - CONEXION
-								include('conexion.php');
 
-								$tipus_bici = $_REQUEST['tipus_bici'];
-								$marca = $_REQUEST['marca'];
-								$model = $_REQUEST['model'];
-								$color = $_REQUEST['color'];
-								$poblacio = $_REQUEST['poblacio'];
-								$poblacio = $_REQUEST['telefon'];
-								$poblacio = $_REQUEST['data_robatori'];
-								$poblacio = $_REQUEST['ubicacio'];
-								$poblacio = $_REQUEST['recompensa'];
-								$poblacio = $_REQUEST['descripcio_bici'];
-
-								try{
-									
-									//Enviar datos a la Base de datos
-									$q = "INSERT INTO up_anunci (tipus_bici, marca_bici, model_bici, color_bici, poblacio, telefon, data_robatori, ubucacio, recompensa, descripcio_bici) VALUES ('$tipus_bici', '$marca', '$model', '$color', '$poblacio', '$telefon', '$data_robatori', '$ubicacio', '$recompensa', '$descripcio_bici')";
-									$consulta = mysqli_query($conexion,$q);
-
-								}catch (Exception $e) {
-
-									echo "ERROR, no s'han pogut desar les dades <br><br>";
-									echo "<a href='./subirAnuncio.php'>Volver a intentar</a><br>";
-									echo "<a href=''>Buscar bicicletas robadas</a><br>";
-
-								}if (! $e) {
-
-									echo "Anunci publicat correctement! <br><br>";
-									echo "<a href=''>Buscar bicicletas robadas</a><br>";
-									echo "<a href=''>Subir anuncio</a><br>";
+			           			$consulta = mysqli_query($conexion,$q);
+			           			echo "$q";
+			           			while($producto=mysqli_fetch_array($consulta)){	
+			           				echo "<div style='1px solid black'>";
+					           			echo "Marca: $producto[anu_marca]<br/>";
+										echo "Model: $producto[anu_model]<br/>";
+										echo "Color: $producto[anu_color]<br/>";
+										// echo "Color: $producto[anu_color]<br/>";
+										// echo "Color: $producto[anu_color]<br/>";
+										// echo "Color: $producto[anu_color]<br/>";
+									echo "</div>";
 								}
-							?>
+
+			           		?>
+
+							
 						</div>
 					<!-- aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa -->
 
@@ -490,4 +475,3 @@
         </div></div>
     </body>
 </html>
-
