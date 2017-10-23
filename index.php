@@ -15,7 +15,7 @@
 </head>
 <body>
 
-	<h1>Busqueda de bicicletas robadas1</h1>
+	<h1>Busqueda de bicicletas robadas</h1>
 
 	<form action="consultas.php">
 		Tipus de bicicleta: <select name="tipus_bici">
@@ -36,14 +36,8 @@
 		Color: <input type="text" name="color_bici"><br>
 		Població: <input type="text" name="poblacio"><br>
 		Data robatori: <input type="text" name="data_robatori"><br>
-		<input id="enviar" type="submit" name="enviar" value="Enviar" onsubmit="formularioVacio()">
+		<input id="enviar" type="submit" name="enviar" value="Buscar">
 	</form>
-
-
-
-
-
-
 
 </body>
 </html>
