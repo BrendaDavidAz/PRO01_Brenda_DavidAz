@@ -27,11 +27,17 @@
 
     <link rel="stylesheet" href="css\main3f56.css?v=11">
     <link rel="stylesheet" href="css\rp.css">
-<script src='https://www.google.com/recaptcha/api.js'></script>
+	<script src='https://www.google.com/recaptcha/api.js'></script>
 
+<!-- form -->
+	<script type="text/javascript">
+		<?php
+			include('conexion.php');
 
-    <!--[if gte IE 9]>
-			<link href="//https://www.bromptonjunctionbcn.com/wp-content/themes/bromptonjunctionbcn.com/theme/cdn-web.brompton.com/css/ie9.css" rel="stylesheet" /><![endif]-->
+			$q="SELECT nom_tipus_bici FROM tipus_bici";
+			$resultado = mysqli_query($conexion,$q);
+		?>
+	</script>
 
     <style>
         .at-svc-google_plusone_share {
@@ -397,14 +403,6 @@
 
 
 
-
-
-
-
-
-
-
-
 			<h1>Busqueda de bicicletas robadas</h1>
 
 			<form action="consultas.php">
@@ -420,7 +418,7 @@
 							}
 						}				
 					?>			
-				</select><br>
+				</select>
 				Marca: <input type="text" name="marca_bici"><br>
 				Model: <input type="text" name="model_bici"><br>
 				Color: <input type="text" name="color_bici"><br>
@@ -429,12 +427,7 @@
 				<input id="enviar" type="submit" name="enviar" value="Buscar">
 			</form>
 
-<?php
-if (mysqli_num_rows($resultado)>0) {
-								$num_productos = mysqli_num_rows($resultado);
-								echo "Productos encontrados: $num_productos <br/><br/>";
 
-?>
 
 
 

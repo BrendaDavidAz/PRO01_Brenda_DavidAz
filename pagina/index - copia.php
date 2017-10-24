@@ -29,6 +29,15 @@
     <link rel="stylesheet" href="css\rp.css">
 <script src='https://www.google.com/recaptcha/api.js'></script>
 
+	<script type="text/javascript">
+		<?php
+			include('conexion.php');
+
+			$q="SELECT nom_tipus_bici FROM tipus_bici";
+			$resultado = mysqli_query($conexion,$q);
+		?>
+	</script>
+
 
     <!--[if gte IE 9]>
 			<link href="//https://www.bromptonjunctionbcn.com/wp-content/themes/bromptonjunctionbcn.com/theme/cdn-web.brompton.com/css/ie9.css" rel="stylesheet" /><![endif]-->
@@ -398,13 +407,6 @@
 
 
 
-
-
-
-
-
-
-
 			<h1>Busqueda de bicicletas robadas</h1>
 
 			<form action="consultas.php">
@@ -429,24 +431,7 @@
 				<input id="enviar" type="submit" name="enviar" value="Buscar">
 			</form>
 
-<?php
-if (mysqli_num_rows($resultado)>0) {
-								$num_productos = mysqli_num_rows($resultado);
-								echo "Productos encontrados: $num_productos <br/><br/>";
-
-?>
-
-
-
-
-
-
-
-
-
-
-
-            <p>
+            
         </div>
         <div id="main_1_chessElements_mediaWrraper_0" class="media" style="margin-top: 0px !important;">
 
@@ -586,4 +571,6 @@ if (mysqli_num_rows($resultado)>0) {
 
     </div>
 </div>
+</p></div></div></div></body>
+
 </html>
